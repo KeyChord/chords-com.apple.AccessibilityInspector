@@ -1,0 +1,36 @@
+name = 'Accessibility Inspector'
+
+[on.menu]
+file = '@keychord/chords-menu/js/menu.js'
+
+[chords]
+'?i' = { name = 'Inspect' }
+'ir' = { name = 'Inspect: Refresh', '@input:menu' = ['BY_PATH', ['Inspection', 'Refresh']] }
+'ip' = { name = 'Inspect: Point', '@input:menu' = ['SEARCH', 'Point to Inspect'] }
+'iu' = { name = 'Inspect: Up Hierarchy - Parent', '@input:menu' = [
+  'BY_PATH',
+  [
+    'Inspection',
+    'Move to Parent Item',
+  ],
+] }
+'id' = { name = 'Inspect: Down Hierarchy - Child', '@input:menu' = [
+  'BY_PATH',
+  [
+    'Inspection',
+    'Move to Child Item',
+  ],
+] }
+'i[' = { name = 'Inspect: Previous', '@input:menu' = [
+  'BY_PATH',
+  [
+    'Inspection',
+    'Move to Previous Item',
+  ],
+] }
+'i]' = { name = 'Inspect: Next', '@input:menu' = ['BY_PATH', ['Inspection', 'Move to Next Item']] }
+
+'?v' = { name = 'Vary' }
+'va' = { name = 'Vary Auto-Interact', '@input:menu' = ['SEARCH', 'Auto-Interact'] }
+'vc' = { name = 'Vary Class', '@input:menu' = ['SEARCH', 'Class Name'] }
+'vi' = { name = 'Vary Ignored', '@input:menu' = ['SEARCH', 'Ignored Elements'] }
